@@ -33,6 +33,10 @@ Chaque [version publiée](https://github.com/Ergalo/scanner-parc/releases) est c
 
 Le site d'Ergalo sert exactement ce fichier, octet pour octet. Seul son **nom** change au téléchargement : il porte le code d'accès du questionnaire (`ergalo-releve-AAAAMMJJ-<code>.exe`), valable 30 jours et une seule fois. Sans ce nom, le programme refuse de tourner. Le fichier publié ici ne sert donc à rien tout seul : c'est voulu.
 
+## Code signing policy
+
+Signature gratuite demandée à SignPath Foundation : Free code signing provided by [SignPath.io](https://about.signpath.io), certificate by [SignPath Foundation](https://signpath.org) (une fois accordée). Équipe, règles et vie privée : [politique de signature](POLITIQUE-DE-SIGNATURE.md).
+
 ## Pour les développeurs
 
 - Code : [`src/`](src) (C# 5, .NET Framework 4.8 livré avec Windows 10 et 11 ; SQLite par `winsqlite3.dll`, livrée avec Windows). Aucune dépendance extérieure.
