@@ -79,5 +79,7 @@ jobs:
             "Vérifier la provenance : \`gh attestation verify ergalo-releve.exe --repo $DEPOT\`" \
             "" \
             "Ce fichier seul ne fonctionne pas : il se télécharge depuis le questionnaire Ergalo, qui lui donne un nom portant le code d'accès du client." \
+            "" \
+            "Code signing policy (SignPath Foundation) : https://github.com/$DEPOT/blob/main/POLITIQUE-DE-SIGNATURE.md" \
             > notes.md
           gh release create "$ETIQUETTE" dist/ergalo-releve.exe dist/SHA256.txt --repo "$DEPOT" --title "$ETIQUETTE" --notes-file notes.md --verify-tag
