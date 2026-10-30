@@ -13,16 +13,16 @@ using System.Text;
 using System.Windows.Forms;
 
 // Informations de version lues par Windows (Propriétés > Détails) et par les antivirus. La version suit l'étiquette de la
-// publication (v1.1.0 → 1.1.0.0) ; la changer veut dire recompiler, donc repartir de zéro en réputation : le moins souvent possible.
+// publication (v1.1.1 → 1.1.1.0) ; la changer veut dire recompiler, donc repartir de zéro en réputation : le moins souvent possible.
 [assembly: AssemblyTitle("Ergalo · Relevé de vos outils")]
 [assembly: AssemblyDescription("Relève les logiciels et les sites de travail de ce PC, sans connexion à Internet. Code source : https://github.com/Ergalo/scanner-parc")]
-[assembly: AssemblyCompany("Ergalo SAS")]
+[assembly: AssemblyCompany("Ergalo")]
 [assembly: AssemblyProduct("Ergalo · Relevé de vos outils")]
-[assembly: AssemblyCopyright("© 2026 Ergalo SAS · licence MIT")]
+[assembly: AssemblyCopyright("© 2026 Guillaume Clerc (Ergalo) · licence MIT")]
 [assembly: AssemblyTrademark("Ergalo")]
-[assembly: AssemblyVersion("1.1.0.0")]
-[assembly: AssemblyFileVersion("1.1.0.0")]
-[assembly: AssemblyInformationalVersion("1.1.0")]
+[assembly: AssemblyVersion("1.1.1.0")]
+[assembly: AssemblyFileVersion("1.1.1.0")]
+[assembly: AssemblyInformationalVersion("1.1.1")]
 [assembly: NeutralResourcesLanguage("fr-FR")]
 
 namespace Ergalo.Releve
