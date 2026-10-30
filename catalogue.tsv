@@ -1,0 +1,1130 @@
+# Catalogue réduit du scanner, produit par le site d'Ergalo à partir de son catalogue des outils : ne pas modifier à la main.
+# F famille, O outil, D domaine, P programme.
+F	messagerie	Messagerie et e-mail
+F	discussion	Discussion d'équipe
+F	visio	Visioconférence
+F	telephonie	Téléphonie et standard
+F	agenda	Agenda et prise de rendez-vous
+F	bureautique	Bureautique
+F	stockage	Stockage et partage de fichiers
+F	documentation	Documentation et notes
+F	gestion-projet	Gestion de projet et tâches
+F	tableurs-bases	Tableurs et bases de données
+F	crm	CRM et suivi commercial
+F	prospection	Prospection commerciale
+F	marketing	Marketing et newsletters
+F	reseaux-sociaux	Réseaux sociaux
+F	site-web	Site internet
+F	e-commerce	Boutique en ligne
+F	compta	Comptabilité et facturation
+F	banque	Banque pro et encaissement
+F	depenses	Notes de frais et dépenses
+F	rh-paie	RH et paie
+F	signature	Signature électronique
+F	erp-metier	Logiciels métier et ERP
+F	support-client	Service client
+F	automatisation	Automatisation et liaisons entre outils
+F	ia	Assistants d'IA
+F	securite	Mots de passe et sécurité
+F	design	Création graphique et vidéo
+F	formulaires	Formulaires et sondages
+O	gmail	Gmail	messagerie
+D	mail.google.com	gmail
+D	gmail.com	gmail
+O	outlook	Outlook	messagerie
+D	outlook.office.com	outlook
+D	outlook.live.com	outlook
+D	outlook.office365.com	outlook
+D	outlook.com	outlook
+D	outlook.cloud.microsoft	outlook
+P	Microsoft Outlook	outlook
+P	Outlook	outlook
+O	thunderbird	Mozilla Thunderbird	messagerie
+D	thunderbird.net	thunderbird
+P	Mozilla Thunderbird	thunderbird
+O	ovhcloud-mail	E-mail OVHcloud	messagerie
+D	mail.ovh.net	ovhcloud-mail
+O	ionos-mail	IONOS Mail	messagerie
+D	mail.ionos.fr	ionos-mail
+D	mail.ionos.com	ionos-mail
+O	orange-mail	Mail Orange	messagerie
+D	messagerie.orange.fr	orange-mail
+O	sfr-mail	Mail SFR	messagerie
+D	webmail.sfr.fr	sfr-mail
+O	free-mail	Mail Free	messagerie
+D	webmail.free.fr	free-mail
+D	imp.free.fr	free-mail
+O	laposte-net	Laposte.net	messagerie
+D	laposte.net	laposte-net
+O	proton-mail	Proton Mail	messagerie
+D	mail.proton.me	proton-mail
+D	protonmail.com	proton-mail
+O	zimbra	Zimbra	messagerie
+D	zimbra.com	zimbra
+O	yahoo-mail	Yahoo Mail	messagerie
+D	mail.yahoo.com	yahoo-mail
+O	gandi-mail	Gandi Mail	messagerie
+D	webmail.gandi.net	gandi-mail
+O	infomaniak-mail	Infomaniak Mail	messagerie
+D	mail.infomaniak.com	infomaniak-mail
+O	zoho-mail	Zoho Mail	messagerie
+D	mail.zoho.com	zoho-mail
+D	mail.zoho.eu	zoho-mail
+O	mailo	Mailo	messagerie
+D	mailo.com	mailo
+O	slack	Slack	discussion
+D	slack.com	slack
+D	app.slack.com	slack
+P	Slack	slack
+O	microsoft-teams	Microsoft Teams	discussion
+D	teams.microsoft.com	microsoft-teams
+D	teams.live.com	microsoft-teams
+D	teams.cloud.microsoft	microsoft-teams
+P	Microsoft Teams	microsoft-teams
+P	Teams	microsoft-teams
+O	discord	Discord	discussion
+D	discord.com	discord
+D	discord.gg	discord
+P	Discord	discord
+O	google-chat	Google Chat	discussion
+D	chat.google.com	google-chat
+O	mattermost	Mattermost	discussion
+D	mattermost.com	mattermost
+P	Mattermost	mattermost
+O	rocketchat	Rocket.Chat	discussion
+D	rocket.chat	rocketchat
+P	Rocket.Chat	rocketchat
+O	whatsapp	WhatsApp	discussion
+D	whatsapp.com	whatsapp
+D	web.whatsapp.com	whatsapp
+D	wa.me	whatsapp
+P	WhatsApp	whatsapp
+O	whatsapp-business	WhatsApp Business	discussion
+D	business.whatsapp.com	whatsapp-business
+P	WhatsApp Business	whatsapp-business
+O	telegram	Telegram	discussion
+D	telegram.org	telegram
+D	web.telegram.org	telegram
+P	Telegram	telegram
+O	signal	Signal	discussion
+D	signal.org	signal
+P	Signal	signal
+O	messenger	Messenger	discussion
+D	messenger.com	messenger
+O	zoom	Zoom	visio
+D	zoom.us	zoom
+D	zoom.com	zoom
+P	Zoom Workplace	zoom
+P	Zoom	zoom
+O	google-meet	Google Meet	visio
+D	meet.google.com	google-meet
+O	webex	Cisco Webex	visio
+D	webex.com	webex
+P	Cisco Webex	webex
+P	Webex	webex
+O	whereby	Whereby	visio
+D	whereby.com	whereby
+O	jitsi	Jitsi Meet	visio
+D	jitsi.org	jitsi
+D	meet.jit.si	jitsi
+O	livestorm	Livestorm	visio
+D	livestorm.co	livestorm
+O	tixeo	Tixeo	visio
+D	tixeo.com	tixeo
+P	Tixeo	tixeo
+O	loom	Loom	visio
+D	loom.com	loom
+P	Loom	loom
+O	klaxoon	Klaxoon	visio
+D	klaxoon.com	klaxoon
+P	Klaxoon	klaxoon
+O	aircall	Aircall	telephonie
+D	aircall.io	aircall
+P	Aircall	aircall
+O	ringover	Ringover	telephonie
+D	ringover.com	ringover
+D	app.ringover.com	ringover
+P	Ringover	ringover
+O	ringcentral	RingCentral	telephonie
+D	ringcentral.com	ringcentral
+D	app.ringcentral.com	ringcentral
+P	RingCentral	ringcentral
+O	3cx	3CX	telephonie
+D	3cx.com	3cx
+P	3CX	3cx
+O	dialpad	Dialpad	telephonie
+D	dialpad.com	dialpad
+P	Dialpad	dialpad
+O	sewan	Sewan	telephonie
+D	sewan.fr	sewan
+O	onoff	OnOff	telephonie
+D	onoff.app	onoff
+P	OnOff	onoff
+O	linphone	Linphone	telephonie
+D	linphone.org	linphone
+P	Linphone	linphone
+O	wildix	Wildix	telephonie
+D	wildix.com	wildix
+P	Wildix	wildix
+O	yeastar	Yeastar	telephonie
+D	yeastar.com	yeastar
+O	wazo	Wazo	telephonie
+D	wazo.io	wazo
+O	google-agenda	Google Agenda	agenda
+D	calendar.google.com	google-agenda
+O	calendly	Calendly	agenda
+D	calendly.com	calendly
+O	doctolib	Doctolib	agenda
+D	doctolib.fr	doctolib
+D	pro.doctolib.fr	doctolib
+O	planity	Planity	agenda
+D	planity.com	planity
+D	pro.planity.com	planity
+O	cal-com	Cal.com	agenda
+D	cal.com	cal-com
+O	acuity	Acuity Scheduling	agenda
+D	acuityscheduling.com	acuity
+O	simplybook	SimplyBook.me	agenda
+D	simplybook.me	simplybook
+O	setmore	Setmore	agenda
+D	setmore.com	setmore
+O	maiia	Maiia	agenda
+D	maiia.com	maiia
+O	treatwell	Treatwell	agenda
+D	treatwell.fr	treatwell
+D	connect.treatwell.fr	treatwell
+O	fresha	Fresha	agenda
+D	fresha.com	fresha
+O	booksy	Booksy	agenda
+D	booksy.com	booksy
+O	thefork	TheFork Manager	agenda
+D	thefork.com	thefork
+D	thefork.fr	thefork
+O	zenchef	Zenchef	agenda
+D	zenchef.com	zenchef
+O	doodle	Doodle	agenda
+D	doodle.com	doodle
+O	microsoft-365	Microsoft 365	bureautique
+D	office.com	microsoft-365
+D	microsoft365.com	microsoft-365
+D	admin.microsoft.com	microsoft-365
+D	portal.office.com	microsoft-365
+D	m365.cloud.microsoft	microsoft-365
+P	Microsoft 365	microsoft-365
+P	Microsoft Office	microsoft-365
+O	google-workspace	Google Workspace	bureautique
+D	workspace.google.com	google-workspace
+D	admin.google.com	google-workspace
+O	word	Microsoft Word	bureautique
+D	word.office.com	word
+D	word.cloud.microsoft	word
+P	Microsoft Word	word
+O	powerpoint	PowerPoint	bureautique
+D	powerpoint.office.com	powerpoint
+D	powerpoint.cloud.microsoft	powerpoint
+P	Microsoft PowerPoint	powerpoint
+P	PowerPoint	powerpoint
+O	google-docs	Google Docs	bureautique
+D	docs.google.com	google-docs
+O	google-slides	Google Slides	bureautique
+D	slides.google.com	google-slides
+O	libreoffice	LibreOffice	bureautique
+D	libreoffice.org	libreoffice
+P	LibreOffice	libreoffice
+O	onlyoffice	ONLYOFFICE	bureautique
+D	onlyoffice.com	onlyoffice
+P	ONLYOFFICE	onlyoffice
+O	acrobat	Adobe Acrobat	bureautique
+D	acrobat.adobe.com	acrobat
+P	Adobe Acrobat	acrobat
+P	Adobe Reader	acrobat
+O	foxit	Foxit PDF	bureautique
+D	foxit.com	foxit
+P	Foxit PDF	foxit
+P	Foxit Reader	foxit
+O	ilovepdf	iLovePDF	bureautique
+D	ilovepdf.com	ilovepdf
+O	smallpdf	Smallpdf	bureautique
+D	smallpdf.com	smallpdf
+O	google-drive	Google Drive	stockage
+D	drive.google.com	google-drive
+P	Google Drive	google-drive
+O	onedrive	Microsoft OneDrive	stockage
+D	onedrive.live.com	onedrive
+D	onedrive.com	onedrive
+P	Microsoft OneDrive	onedrive
+P	OneDrive	onedrive
+O	sharepoint	SharePoint	stockage
+D	sharepoint.com	sharepoint
+O	dropbox	Dropbox	stockage
+D	dropbox.com	dropbox
+P	Dropbox	dropbox
+O	box	Box	stockage
+D	box.com	box
+P	Box	box
+O	wetransfer	WeTransfer	stockage
+D	wetransfer.com	wetransfer
+O	swisstransfer	SwissTransfer	stockage
+D	swisstransfer.com	swisstransfer
+O	nextcloud	Nextcloud	stockage
+D	nextcloud.com	nextcloud
+P	Nextcloud	nextcloud
+O	pcloud	pCloud	stockage
+D	pcloud.com	pcloud
+P	pCloud Drive	pcloud
+O	mega	MEGA	stockage
+D	mega.nz	mega
+D	mega.io	mega
+P	MEGAsync	mega
+P	MEGA	mega
+O	kdrive	Infomaniak kDrive	stockage
+D	kdrive.infomaniak.com	kdrive
+P	kDrive	kdrive
+O	proton-drive	Proton Drive	stockage
+D	drive.proton.me	proton-drive
+O	synology	Synology	stockage
+D	synology.com	synology
+D	quickconnect.to	synology
+D	synology.me	synology
+P	Synology Drive	synology
+P	Synology Active Backup	synology
+O	qnap	QNAP	stockage
+D	qnap.com	qnap
+D	myqnapcloud.com	qnap
+P	QNAP Qfinder Pro	qnap
+P	Qsync	qnap
+O	tresorit	Tresorit	stockage
+D	tresorit.com	tresorit
+P	Tresorit	tresorit
+O	digiposte	Digiposte	stockage
+D	digiposte.fr	digiposte
+O	acronis	Acronis	stockage
+D	acronis.com	acronis
+P	Acronis	acronis
+O	backblaze	Backblaze	stockage
+D	backblaze.com	backblaze
+P	Backblaze	backblaze
+O	veeam	Veeam	stockage
+D	veeam.com	veeam
+P	Veeam	veeam
+O	notion	Notion	documentation
+D	notion.so	notion
+D	notion.com	notion
+P	Notion	notion
+O	onenote	Microsoft OneNote	documentation
+D	onenote.com	onenote
+D	onenote.office.com	onenote
+P	OneNote	onenote
+P	Microsoft OneNote	onenote
+O	evernote	Evernote	documentation
+D	evernote.com	evernote
+P	Evernote	evernote
+O	obsidian	Obsidian	documentation
+D	obsidian.md	obsidian
+P	Obsidian	obsidian
+O	coda	Coda	documentation
+D	coda.io	coda
+O	slite	Slite	documentation
+D	slite.com	slite
+P	Slite	slite
+O	gitbook	GitBook	documentation
+D	gitbook.com	gitbook
+O	google-keep	Google Keep	documentation
+D	keep.google.com	google-keep
+O	craft	Craft	documentation
+D	craft.do	craft
+P	Craft	craft
+O	outline	Outline	documentation
+D	getoutline.com	outline
+O	loop	Microsoft Loop	documentation
+D	loop.microsoft.com	loop
+O	lucid	Lucidchart	documentation
+D	lucid.app	lucid
+D	lucidchart.com	lucid
+O	drawio	draw.io	documentation
+D	diagrams.net	drawio
+D	draw.io	drawio
+P	draw.io	drawio
+O	trello	Trello	gestion-projet
+D	trello.com	trello
+O	asana	Asana	gestion-projet
+D	asana.com	asana
+D	app.asana.com	asana
+O	monday	monday.com	gestion-projet
+D	monday.com	monday
+O	clickup	ClickUp	gestion-projet
+D	clickup.com	clickup
+D	app.clickup.com	clickup
+O	jira	Jira	gestion-projet
+D	atlassian.net	jira
+D	jira.com	jira
+O	basecamp	Basecamp	gestion-projet
+D	basecamp.com	basecamp
+D	3.basecamp.com	basecamp
+O	wrike	Wrike	gestion-projet
+D	wrike.com	wrike
+O	smartsheet	Smartsheet	gestion-projet
+D	smartsheet.com	smartsheet
+O	teamwork	Teamwork	gestion-projet
+D	teamwork.com	teamwork
+O	todoist	Todoist	gestion-projet
+D	todoist.com	todoist
+D	app.todoist.com	todoist
+P	Todoist	todoist
+O	microsoft-planner	Microsoft Planner	gestion-projet
+D	planner.cloud.microsoft	microsoft-planner
+D	tasks.office.com	microsoft-planner
+O	microsoft-to-do	Microsoft To Do	gestion-projet
+D	to-do.office.com	microsoft-to-do
+D	to-do.live.com	microsoft-to-do
+P	Microsoft To Do	microsoft-to-do
+O	microsoft-project	Microsoft Project	gestion-projet
+D	project.microsoft.com	microsoft-project
+P	Microsoft Project	microsoft-project
+O	miro	Miro	gestion-projet
+D	miro.com	miro
+P	Miro	miro
+O	toggl	Toggl Track	gestion-projet
+D	toggl.com	toggl
+D	track.toggl.com	toggl
+P	Toggl Track	toggl
+O	clockify	Clockify	gestion-projet
+D	clockify.me	clockify
+P	Clockify	clockify
+O	zoho-projects	Zoho Projects	gestion-projet
+D	projects.zoho.com	zoho-projects
+D	projects.zoho.eu	zoho-projects
+O	excel	Excel	tableurs-bases
+D	excel.office.com	excel
+D	excel.cloud.microsoft	excel
+P	Microsoft Excel	excel
+P	Excel	excel
+O	google-sheets	Google Sheets	tableurs-bases
+D	sheets.google.com	google-sheets
+O	airtable	Airtable	tableurs-bases
+D	airtable.com	airtable
+O	baserow	Baserow	tableurs-bases
+D	baserow.io	baserow
+O	seatable	SeaTable	tableurs-bases
+D	seatable.io	seatable
+O	grist	Grist	tableurs-bases
+D	getgrist.com	grist
+O	filemaker	Claris FileMaker	tableurs-bases
+D	claris.com	filemaker
+P	Claris FileMaker	filemaker
+P	FileMaker Pro	filemaker
+O	power-bi	Power BI	tableurs-bases
+D	app.powerbi.com	power-bi
+D	powerbi.com	power-bi
+P	Power BI Desktop	power-bi
+P	Power BI	power-bi
+O	looker-studio	Looker Studio	tableurs-bases
+D	lookerstudio.google.com	looker-studio
+D	datastudio.google.com	looker-studio
+O	metabase	Metabase	tableurs-bases
+D	metabase.com	metabase
+O	hubspot	HubSpot	crm
+D	hubspot.com	hubspot
+D	hubspot.fr	hubspot
+O	salesforce	Salesforce	crm
+D	salesforce.com	salesforce
+D	force.com	salesforce
+O	pipedrive	Pipedrive	crm
+D	pipedrive.com	pipedrive
+O	zoho-crm	Zoho CRM	crm
+D	crm.zoho.com	zoho-crm
+D	crm.zoho.eu	zoho-crm
+O	sellsy	Sellsy	crm
+D	sellsy.com	sellsy
+D	sellsy.fr	sellsy
+O	nocrm	noCRM.io	crm
+D	nocrm.io	nocrm
+O	folk	folk	crm
+D	folk.app	folk
+O	bitrix24	Bitrix24	crm
+D	bitrix24.fr	bitrix24
+D	bitrix24.com	bitrix24
+O	karlia	Karlia	crm
+D	karlia.fr	karlia
+O	teamleader	Teamleader	crm
+D	teamleader.eu	teamleader
+D	focus.teamleader.eu	teamleader
+O	dynamics-365	Microsoft Dynamics 365	crm
+D	dynamics.com	dynamics-365
+O	lemlist	lemlist	prospection
+D	lemlist.com	lemlist
+O	waalaxy	Waalaxy	prospection
+D	waalaxy.com	waalaxy
+O	lagrowthmachine	La Growth Machine	prospection
+D	lagrowthmachine.com	lagrowthmachine
+O	kaspr	Kaspr	prospection
+D	kaspr.io	kaspr
+O	dropcontact	Dropcontact	prospection
+D	dropcontact.com	dropcontact
+D	dropcontact.io	dropcontact
+O	lusha	Lusha	prospection
+D	lusha.com	lusha
+O	apollo	Apollo.io	prospection
+D	apollo.io	apollo
+O	phantombuster	PhantomBuster	prospection
+D	phantombuster.com	phantombuster
+O	snov	Snov.io	prospection
+D	snov.io	snov
+O	hunter	Hunter	prospection
+D	hunter.io	hunter
+O	woodpecker	Woodpecker	prospection
+D	woodpecker.co	woodpecker
+O	evaboot	Evaboot	prospection
+D	evaboot.com	evaboot
+O	societe-com	Societe.com	prospection
+D	societe.com	societe-com
+O	pappers	Pappers	prospection
+D	pappers.fr	pappers
+O	infogreffe	Infogreffe	prospection
+D	infogreffe.fr	infogreffe
+O	manageo	Manageo	prospection
+D	manageo.fr	manageo
+O	kompass	Kompass	prospection
+D	kompass.com	kompass
+O	brevo	Brevo	marketing
+D	brevo.com	brevo
+D	sendinblue.com	brevo
+O	mailchimp	Mailchimp	marketing
+D	mailchimp.com	mailchimp
+O	sarbacane	Sarbacane	marketing
+D	sarbacane.com	sarbacane
+O	mailjet	Mailjet	marketing
+D	mailjet.com	mailjet
+O	klaviyo	Klaviyo	marketing
+D	klaviyo.com	klaviyo
+O	getresponse	GetResponse	marketing
+D	getresponse.com	getresponse
+D	getresponse.fr	getresponse
+O	activecampaign	ActiveCampaign	marketing
+D	activecampaign.com	activecampaign
+O	mailerlite	MailerLite	marketing
+D	mailerlite.com	mailerlite
+O	buffer	Buffer	marketing
+D	buffer.com	buffer
+O	hootsuite	Hootsuite	marketing
+D	hootsuite.com	hootsuite
+O	later	Later	marketing
+D	later.com	later
+O	metricool	Metricool	marketing
+D	metricool.com	metricool
+O	agorapulse	Agorapulse	marketing
+D	agorapulse.com	agorapulse
+O	swello	Swello	marketing
+D	swello.com	swello
+O	google-analytics	Google Analytics	marketing
+D	analytics.google.com	google-analytics
+O	google-search-console	Google Search Console	marketing
+D	search.google.com	google-search-console
+O	google-ads	Google Ads	marketing
+D	ads.google.com	google-ads
+O	google-tag-manager	Google Tag Manager	marketing
+D	tagmanager.google.com	google-tag-manager
+O	google-business-profile	Google Business Profile	marketing
+D	business.google.com	google-business-profile
+O	meta-business	Meta Business Suite	marketing
+D	business.facebook.com	meta-business
+D	adsmanager.facebook.com	meta-business
+O	semrush	Semrush	marketing
+D	semrush.com	semrush
+O	ahrefs	Ahrefs	marketing
+D	ahrefs.com	ahrefs
+O	matomo	Matomo	marketing
+D	matomo.org	matomo
+D	matomo.cloud	matomo
+O	plausible	Plausible	marketing
+D	plausible.io	plausible
+O	axeptio	Axeptio	marketing
+D	axeptio.eu	axeptio
+O	didomi	Didomi	marketing
+D	didomi.io	didomi
+O	hotjar	Hotjar	marketing
+D	hotjar.com	hotjar
+O	trustpilot	Trustpilot	marketing
+D	trustpilot.com	trustpilot
+O	skeepers	Skeepers (Avis Vérifiés)	marketing
+D	skeepers.io	skeepers
+D	avis-verifies.com	skeepers
+O	pagesjaunes	PagesJaunes	marketing
+D	pagesjaunes.fr	pagesjaunes
+D	pro.pagesjaunes.fr	pagesjaunes
+O	facebook	Facebook	reseaux-sociaux
+D	facebook.com	facebook
+D	fb.com	facebook
+O	instagram	Instagram	reseaux-sociaux
+D	instagram.com	instagram
+O	linkedin	LinkedIn	reseaux-sociaux
+D	linkedin.com	linkedin
+O	x	X (Twitter)	reseaux-sociaux
+D	x.com	x
+D	twitter.com	x
+O	youtube	YouTube	reseaux-sociaux
+D	youtube.com	youtube
+D	youtu.be	youtube
+O	tiktok	TikTok	reseaux-sociaux
+D	tiktok.com	tiktok
+O	pinterest	Pinterest	reseaux-sociaux
+D	pinterest.fr	pinterest
+D	pinterest.com	pinterest
+O	snapchat	Snapchat	reseaux-sociaux
+D	snapchat.com	snapchat
+O	threads	Threads	reseaux-sociaux
+D	threads.net	threads
+D	threads.com	threads
+O	tripadvisor	Tripadvisor	reseaux-sociaux
+D	tripadvisor.fr	tripadvisor
+D	tripadvisor.com	tripadvisor
+O	wordpress	WordPress	site-web
+D	wordpress.com	wordpress
+D	wordpress.org	wordpress
+O	wix	Wix	site-web
+D	wix.com	wix
+D	wixsite.com	wix
+O	squarespace	Squarespace	site-web
+D	squarespace.com	squarespace
+O	webflow	Webflow	site-web
+D	webflow.com	webflow
+D	webflow.io	webflow
+O	jimdo	Jimdo	site-web
+D	jimdo.com	jimdo
+O	framer	Framer	site-web
+D	framer.com	framer
+O	google-sites	Google Sites	site-web
+D	sites.google.com	google-sites
+O	godaddy	GoDaddy	site-web
+D	godaddy.com	godaddy
+O	ovhcloud	OVHcloud	site-web
+D	ovhcloud.com	ovhcloud
+D	ovh.com	ovhcloud
+O	ionos	IONOS	site-web
+D	ionos.fr	ionos
+D	ionos.com	ionos
+O	gandi	Gandi	site-web
+D	gandi.net	gandi
+O	o2switch	o2switch	site-web
+D	o2switch.fr	o2switch
+O	hostinger	Hostinger	site-web
+D	hostinger.fr	hostinger
+D	hostinger.com	hostinger
+O	infomaniak	Infomaniak	site-web
+D	infomaniak.com	infomaniak
+O	cloudflare	Cloudflare	site-web
+D	cloudflare.com	cloudflare
+D	dash.cloudflare.com	cloudflare
+O	lws	LWS	site-web
+D	lws.fr	lws
+O	shopify	Shopify	e-commerce
+D	shopify.com	shopify
+D	myshopify.com	shopify
+O	woocommerce	WooCommerce	e-commerce
+D	woocommerce.com	woocommerce
+O	prestashop	PrestaShop	e-commerce
+D	prestashop.com	prestashop
+O	bigcommerce	BigCommerce	e-commerce
+D	bigcommerce.com	bigcommerce
+O	wizishop	WiziShop	e-commerce
+D	wizishop.fr	wizishop
+O	amazon-seller	Amazon Seller Central	e-commerce
+D	sellercentral.amazon.fr	amazon-seller
+D	sellercentral.amazon.com	amazon-seller
+O	cdiscount	Cdiscount Marketplace	e-commerce
+D	cdiscount.com	cdiscount
+O	etsy	Etsy	e-commerce
+D	etsy.com	etsy
+O	ebay	eBay	e-commerce
+D	ebay.fr	ebay
+D	ebay.com	ebay
+O	leboncoin	leboncoin	e-commerce
+D	leboncoin.fr	leboncoin
+O	manomano	ManoMano	e-commerce
+D	manomano.fr	manomano
+O	lengow	Lengow	e-commerce
+D	lengow.com	lengow
+O	shopping-flux	Shopping Flux	e-commerce
+D	shopping-flux.com	shopping-flux
+O	google-merchant	Google Merchant Center	e-commerce
+D	merchants.google.com	google-merchant
+O	sendcloud	Sendcloud	e-commerce
+D	sendcloud.com	sendcloud
+O	boxtal	Boxtal	e-commerce
+D	boxtal.com	boxtal
+O	colissimo	Colissimo	e-commerce
+D	colissimo.fr	colissimo
+O	chronopost	Chronopost	e-commerce
+D	chronopost.fr	chronopost
+O	mondial-relay	Mondial Relay	e-commerce
+D	mondialrelay.fr	mondial-relay
+O	pennylane	Pennylane	compta
+D	pennylane.com	pennylane
+D	app.pennylane.com	pennylane
+O	tiime	Tiime	compta
+D	tiime.fr	tiime
+O	indy	Indy	compta
+D	indy.fr	indy
+O	axonaut	Axonaut	compta
+D	axonaut.com	axonaut
+O	henrri	Henrri	compta
+D	henrri.com	henrri
+O	freebe	Freebe	compta
+D	freebe.me	freebe
+O	abby	Abby	compta
+D	abby.fr	abby
+O	ebp	EBP	compta
+D	ebp.com	ebp
+P	EBP	ebp
+O	sage	Sage	compta
+D	sage.com	sage
+D	sage.fr	sage
+P	Sage	sage
+O	ciel	Ciel	compta
+D	ciel.com	ciel
+P	Ciel	ciel
+O	cegid	Cegid	compta
+D	cegid.com	cegid
+P	Cegid	cegid
+O	quickbooks	QuickBooks	compta
+D	quickbooks.intuit.com	quickbooks
+D	qbo.intuit.com	quickbooks
+P	QuickBooks	quickbooks
+O	dougs	Dougs	compta
+D	dougs.fr	dougs
+O	evoliz	Evoliz	compta
+D	evoliz.com	evoliz
+O	zoho-books	Zoho Books	compta
+D	books.zoho.com	zoho-books
+D	books.zoho.eu	zoho-books
+O	xero	Xero	compta
+D	xero.com	xero
+O	kiwili	Kiwili	compta
+D	kiwili.com	kiwili
+O	clementine	Clementine	compta
+D	clementine.fr	clementine
+O	l-expert-comptable	L-Expert-comptable.com	compta
+D	l-expert-comptable.com	l-expert-comptable
+O	impots-gouv	impots.gouv.fr	compta
+D	impots.gouv.fr	impots-gouv
+O	urssaf	URSSAF	compta
+D	urssaf.fr	urssaf
+O	net-entreprises	net-entreprises.fr	compta
+D	net-entreprises.fr	net-entreprises
+O	qonto	Qonto	banque
+D	qonto.com	qonto
+D	app.qonto.com	qonto
+O	shine	Shine	banque
+D	shine.fr	shine
+O	blank	Blank	banque
+D	blank.app	blank
+O	revolut-business	Revolut Business	banque
+D	business.revolut.com	revolut-business
+O	wise	Wise Business	banque
+D	wise.com	wise
+O	bnp-paribas	BNP Paribas	banque
+D	mabanque.bnpparibas	bnp-paribas
+O	societe-generale	Société Générale	banque
+D	sg.fr	societe-generale
+D	societegenerale.fr	societe-generale
+O	credit-agricole	Crédit Agricole	banque
+D	credit-agricole.fr	credit-agricole
+O	lcl	LCL	banque
+D	lcl.fr	lcl
+O	banque-populaire	Banque Populaire	banque
+D	banquepopulaire.fr	banque-populaire
+O	caisse-epargne	Caisse d'Épargne	banque
+D	caisse-epargne.fr	caisse-epargne
+O	cic	CIC	banque
+D	cic.fr	cic
+O	credit-mutuel	Crédit Mutuel	banque
+D	creditmutuel.fr	credit-mutuel
+O	la-banque-postale	La Banque Postale	banque
+D	labanquepostale.fr	la-banque-postale
+O	hsbc	HSBC	banque
+D	hsbc.fr	hsbc
+O	stripe	Stripe	banque
+D	stripe.com	stripe
+D	dashboard.stripe.com	stripe
+O	paypal	PayPal	banque
+D	paypal.com	paypal
+O	sumup	SumUp	banque
+D	sumup.com	sumup
+D	sumup.fr	sumup
+O	zettle	Zettle	banque
+D	zettle.com	zettle
+O	lightspeed	Lightspeed	banque
+D	lightspeedhq.fr	lightspeed
+D	lightspeedhq.com	lightspeed
+P	Lightspeed	lightspeed
+O	alma	Alma	banque
+D	getalma.eu	alma
+D	almapay.com	alma
+O	payplug	Payplug	banque
+D	payplug.com	payplug
+O	mollie	Mollie	banque
+D	mollie.com	mollie
+O	agicap	Agicap	banque
+D	agicap.com	agicap
+O	fygr	Fygr	banque
+D	fygr.io	fygr
+O	spendesk	Spendesk	depenses
+D	spendesk.com	spendesk
+O	n2f	N2F	depenses
+D	n2f.com	n2f
+O	expensya	Expensya	depenses
+D	expensya.com	expensya
+O	pleo	Pleo	depenses
+D	pleo.io	pleo
+O	mooncard	Mooncard	depenses
+D	mooncard.co	mooncard
+O	rydoo	Rydoo	depenses
+D	rydoo.com	rydoo
+O	libeo	Libeo	depenses
+D	libeo.io	libeo
+O	swile	Swile	depenses
+D	swile.co	swile
+O	edenred	Edenred	depenses
+D	edenred.fr	edenred
+O	pluxee	Pluxee	depenses
+D	pluxee.fr	pluxee
+O	payfit	PayFit	rh-paie
+D	payfit.com	payfit
+D	app.payfit.com	payfit
+O	lucca	Lucca	rh-paie
+D	lucca.fr	lucca
+D	ilucca.net	lucca
+O	silae	Silae	rh-paie
+D	silae.fr	silae
+O	eurecia	Eurécia	rh-paie
+D	eurecia.com	eurecia
+O	factorial	Factorial	rh-paie
+D	factorialhr.fr	factorial
+D	factorialhr.com	factorial
+O	skello	Skello	rh-paie
+D	skello.io	skello
+O	personio	Personio	rh-paie
+D	personio.fr	personio
+D	personio.com	personio
+O	hibob	HiBob	rh-paie
+D	hibob.com	hibob
+O	teamtailor	Teamtailor	rh-paie
+D	teamtailor.com	teamtailor
+O	welcome-to-the-jungle	Welcome to the Jungle	rh-paie
+D	welcometothejungle.com	welcome-to-the-jungle
+O	indeed	Indeed	rh-paie
+D	indeed.fr	indeed
+D	indeed.com	indeed
+D	employers.indeed.com	indeed
+O	hellowork	HelloWork	rh-paie
+D	hellowork.com	hellowork
+O	france-travail	France Travail	rh-paie
+D	francetravail.fr	france-travail
+D	pole-emploi.fr	france-travail
+O	malt	Malt	rh-paie
+D	malt.fr	malt
+D	malt.com	malt
+O	alan	Alan	rh-paie
+D	alan.com	alan
+O	yousign	Yousign	signature
+D	yousign.com	yousign
+D	yousign.app	yousign
+O	docusign	DocuSign	signature
+D	docusign.com	docusign
+D	docusign.net	docusign
+P	DocuSign	docusign
+O	adobe-sign	Adobe Acrobat Sign	signature
+D	adobesign.com	adobe-sign
+D	echosign.com	adobe-sign
+O	universign	Universign	signature
+D	universign.com	universign
+O	dropbox-sign	Dropbox Sign	signature
+D	hellosign.com	dropbox-sign
+D	sign.dropbox.com	dropbox-sign
+O	signnow	signNow	signature
+D	signnow.com	signnow
+O	pandadoc	PandaDoc	signature
+D	pandadoc.com	pandadoc
+O	zoho-sign	Zoho Sign	signature
+D	sign.zoho.com	zoho-sign
+D	sign.zoho.eu	zoho-sign
+O	odoo	Odoo	erp-metier
+D	odoo.com	odoo
+P	Odoo	odoo
+O	dolibarr	Dolibarr	erp-metier
+D	dolibarr.org	dolibarr
+D	dolibarr.fr	dolibarr
+P	Dolibarr	dolibarr
+P	DoliWamp	dolibarr
+O	divalto	Divalto	erp-metier
+D	divalto.com	divalto
+D	divalto.fr	divalto
+P	Divalto	divalto
+O	batappli	Batappli	erp-metier
+D	batappli.fr	batappli
+P	Batappli	batappli
+O	obat	Obat	erp-metier
+D	obat.fr	obat
+O	tolteck	Tolteck	erp-metier
+D	tolteck.com	tolteck
+O	extrabat	Extrabat	erp-metier
+D	extrabat.com	extrabat
+P	Extrabat	extrabat
+O	graneet	Graneet	erp-metier
+D	graneet.com	graneet
+O	vertuoza	Vertuoza	erp-metier
+D	vertuoza.com	vertuoza
+O	archipad	Archipad	erp-metier
+D	archipad.com	archipad
+P	Archipad	archipad
+O	zelty	Zelty	erp-metier
+D	zelty.fr	zelty
+O	laddition	L'Addition	erp-metier
+D	laddition.com	laddition
+O	hiboutik	Hiboutik	erp-metier
+D	hiboutik.com	hiboutik
+O	zendesk	Zendesk	support-client
+D	zendesk.com	zendesk
+D	zendesk.fr	zendesk
+O	freshdesk	Freshdesk	support-client
+D	freshdesk.com	freshdesk
+O	intercom	Intercom	support-client
+D	intercom.com	intercom
+D	intercom.io	intercom
+O	crisp	Crisp	support-client
+D	crisp.chat	crisp
+O	helpscout	Help Scout	support-client
+D	helpscout.com	helpscout
+D	helpscout.net	helpscout
+O	tidio	Tidio	support-client
+D	tidio.com	tidio
+O	tawk	Tawk.to	support-client
+D	tawk.to	tawk
+O	livechat	LiveChat	support-client
+D	livechat.com	livechat
+O	front	Front	support-client
+D	frontapp.com	front
+O	gorgias	Gorgias	support-client
+D	gorgias.com	gorgias
+O	zoho-desk	Zoho Desk	support-client
+D	desk.zoho.com	zoho-desk
+D	desk.zoho.eu	zoho-desk
+O	glpi	GLPI	support-client
+D	glpi-project.org	glpi
+O	teamviewer	TeamViewer	support-client
+D	teamviewer.com	teamviewer
+P	TeamViewer	teamviewer
+O	anydesk	AnyDesk	support-client
+D	anydesk.com	anydesk
+P	AnyDesk	anydesk
+O	zapier	Zapier	automatisation
+D	zapier.com	zapier
+O	make	Make	automatisation
+D	make.com	make
+D	integromat.com	make
+O	n8n	n8n	automatisation
+D	n8n.io	n8n
+D	n8n.cloud	n8n
+O	power-automate	Microsoft Power Automate	automatisation
+D	make.powerautomate.com	power-automate
+D	flow.microsoft.com	power-automate
+D	powerautomate.microsoft.com	power-automate
+P	Power Automate	power-automate
+O	power-apps	Microsoft Power Apps	automatisation
+D	make.powerapps.com	power-apps
+D	powerapps.microsoft.com	power-apps
+O	ifttt	IFTTT	automatisation
+D	ifttt.com	ifttt
+O	bubble	Bubble	automatisation
+D	bubble.io	bubble
+O	softr	Softr	automatisation
+D	softr.io	softr
+O	glide	Glide	automatisation
+D	glideapps.com	glide
+O	chatgpt	ChatGPT	ia
+D	chatgpt.com	chatgpt
+D	chat.openai.com	chatgpt
+P	ChatGPT	chatgpt
+O	claude	Claude	ia
+D	claude.ai	claude
+D	claude.com	claude
+P	Claude	claude
+O	mistral	Mistral Le Chat	ia
+D	chat.mistral.ai	mistral
+D	mistral.ai	mistral
+O	gemini	Gemini	ia
+D	gemini.google.com	gemini
+O	copilot	Microsoft Copilot	ia
+D	copilot.microsoft.com	copilot
+D	copilot.cloud.microsoft	copilot
+P	Microsoft Copilot	copilot
+P	Copilot	copilot
+O	perplexity	Perplexity	ia
+D	perplexity.ai	perplexity
+P	Perplexity	perplexity
+O	notebooklm	NotebookLM	ia
+D	notebooklm.google.com	notebooklm
+D	notebooklm.google	notebooklm
+O	deepseek	DeepSeek	ia
+D	deepseek.com	deepseek
+D	chat.deepseek.com	deepseek
+O	deepl	DeepL	ia
+D	deepl.com	deepl
+P	DeepL	deepl
+O	grammarly	Grammarly	ia
+D	grammarly.com	grammarly
+P	Grammarly	grammarly
+O	antidote	Antidote	ia
+D	antidote.info	antidote
+D	druide.com	antidote
+P	Antidote	antidote
+O	reverso	Reverso	ia
+D	reverso.net	reverso
+P	Reverso	reverso
+O	midjourney	Midjourney	ia
+D	midjourney.com	midjourney
+O	firefly	Adobe Firefly	ia
+D	firefly.adobe.com	firefly
+O	elevenlabs	ElevenLabs	ia
+D	elevenlabs.io	elevenlabs
+O	otter	Otter.ai	ia
+D	otter.ai	otter
+O	fireflies	Fireflies.ai	ia
+D	fireflies.ai	fireflies
+O	tldv	tl;dv	ia
+D	tldv.io	tldv
+O	jasper	Jasper	ia
+D	jasper.ai	jasper
+O	gamma	Gamma	ia
+D	gamma.app	gamma
+O	runway	Runway	ia
+D	runwayml.com	runway
+O	heygen	HeyGen	ia
+D	heygen.com	heygen
+O	synthesia	Synthesia	ia
+D	synthesia.io	synthesia
+O	1password	1Password	securite
+D	1password.com	1password
+D	1password.eu	1password
+P	1Password	1password
+O	bitwarden	Bitwarden	securite
+D	bitwarden.com	bitwarden
+D	vault.bitwarden.com	bitwarden
+P	Bitwarden	bitwarden
+O	dashlane	Dashlane	securite
+D	dashlane.com	dashlane
+P	Dashlane	dashlane
+O	nordpass	NordPass	securite
+D	nordpass.com	nordpass
+P	NordPass	nordpass
+O	lastpass	LastPass	securite
+D	lastpass.com	lastpass
+P	LastPass	lastpass
+O	keepass	KeePass	securite
+D	keepass.info	keepass
+D	keepassxc.org	keepass
+P	KeePass	keepass
+P	KeePassXC	keepass
+O	proton-pass	Proton Pass	securite
+D	pass.proton.me	proton-pass
+O	keeper	Keeper	securite
+D	keepersecurity.com	keeper
+P	Keeper	keeper
+O	nordvpn	NordVPN	securite
+D	nordvpn.com	nordvpn
+P	NordVPN	nordvpn
+O	proton-vpn	Proton VPN	securite
+D	protonvpn.com	proton-vpn
+P	Proton VPN	proton-vpn
+O	bitdefender	Bitdefender	securite
+D	bitdefender.com	bitdefender
+D	bitdefender.fr	bitdefender
+P	Bitdefender	bitdefender
+O	eset	ESET	securite
+D	eset.com	eset
+P	ESET	eset
+O	kaspersky	Kaspersky	securite
+D	kaspersky.fr	kaspersky
+D	kaspersky.com	kaspersky
+P	Kaspersky	kaspersky
+O	avast	Avast	securite
+D	avast.com	avast
+P	Avast	avast
+O	malwarebytes	Malwarebytes	securite
+D	malwarebytes.com	malwarebytes
+P	Malwarebytes	malwarebytes
+O	sophos	Sophos	securite
+D	sophos.com	sophos
+P	Sophos	sophos
+O	mcafee	McAfee	securite
+D	mcafee.com	mcafee
+P	McAfee	mcafee
+O	mailinblack	Mailinblack	securite
+D	mailinblack.com	mailinblack
+O	canva	Canva	design
+D	canva.com	canva
+P	Canva	canva
+O	adobe-creative-cloud	Adobe Creative Cloud	design
+D	creativecloud.adobe.com	adobe-creative-cloud
+P	Adobe Creative Cloud	adobe-creative-cloud
+O	adobe-express	Adobe Express	design
+D	express.adobe.com	adobe-express
+O	photoshop	Adobe Photoshop	design
+D	photoshop.adobe.com	photoshop
+P	Adobe Photoshop	photoshop
+O	illustrator	Adobe Illustrator	design
+D	illustrator.adobe.com	illustrator
+P	Adobe Illustrator	illustrator
+O	figma	Figma	design
+D	figma.com	figma
+P	Figma	figma
+O	davinci-resolve	DaVinci Resolve	design
+D	blackmagicdesign.com	davinci-resolve
+P	DaVinci Resolve	davinci-resolve
+O	capcut	CapCut	design
+D	capcut.com	capcut
+P	CapCut	capcut
+O	vimeo	Vimeo	design
+D	vimeo.com	vimeo
+O	gimp	GIMP	design
+D	gimp.org	gimp
+P	GIMP	gimp
+O	inkscape	Inkscape	design
+D	inkscape.org	inkscape
+P	Inkscape	inkscape
+O	freepik	Freepik	design
+D	freepik.com	freepik
+O	shutterstock	Shutterstock	design
+D	shutterstock.com	shutterstock
+O	obs-studio	OBS Studio	design
+D	obsproject.com	obs-studio
+P	OBS Studio	obs-studio
+O	veed	VEED.IO	design
+D	veed.io	veed
+O	clipchamp	Clipchamp	design
+D	clipchamp.com	clipchamp
+P	Clipchamp	clipchamp
+O	vistaprint	Vistaprint	design
+D	vistaprint.fr	vistaprint
+O	exaprint	Exaprint	design
+D	exaprint.fr	exaprint
+O	typeform	Typeform	formulaires
+D	typeform.com	typeform
+O	tally	Tally	formulaires
+D	tally.so	tally
+O	google-forms	Google Forms	formulaires
+D	forms.google.com	google-forms
+O	microsoft-forms	Microsoft Forms	formulaires
+D	forms.office.com	microsoft-forms
+D	forms.microsoft.com	microsoft-forms
+D	forms.cloud.microsoft	microsoft-forms
+O	jotform	Jotform	formulaires
+D	jotform.com	jotform
+D	eu.jotform.com	jotform
+O	surveymonkey	SurveyMonkey	formulaires
+D	surveymonkey.com	surveymonkey
+O	limesurvey	LimeSurvey	formulaires
+D	limesurvey.org	limesurvey
+O	zoho-forms	Zoho Forms	formulaires
+D	forms.zoho.com	zoho-forms
+D	forms.zoho.eu	zoho-forms
