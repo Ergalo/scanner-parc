@@ -1,0 +1,83 @@
+# Compile et teste le programme sur Windows à chaque proposition de modification ; à chaque étiquette v*, publie une
+# version (release) avec l'exécutable, son empreinte SHA-256 et une attestation de provenance GitHub : on peut vérifier
+# que l'exécutable publié sort bien de ce code, compilé ici. Actions épinglées par empreinte.
+name: Construire
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+    tags: ["v*"]
+
+permissions:
+  contents: read
+
+jobs:
+  construire:
+    runs-on: windows-2025
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+        with:
+          persist-credentials: false
+      - name: Vérifier que le code n'a aucun moyen de se connecter au réseau
+        shell: powershell
+        run: |
+          $interdit = 'System\.Net|WebClient|WebRequest|HttpClient|Socket|Dns\.|wininet|winhttp|ws2_32|urlmon|InternetOpen'
+          $trouve = Select-String -Path src\*.cs -Pattern $interdit
+          if ($trouve) { $trouve | ForEach-Object { Write-Host $_ }; throw "Fonction réseau trouvée dans le code" }
+      - name: Compiler et lancer les tests
+        shell: powershell
+        run: powershell -ExecutionPolicy Bypass -File construire.ps1
+      - name: Vérifier la version de l'exécutable
+        if: startsWith(github.ref, 'refs/tags/v')
+        shell: powershell
+        env:
+          ETIQUETTE: ${{ github.ref_name }}
+        run: |
+          $attendue = $env:ETIQUETTE.TrimStart('v') + '.0'
+          $lue = (Get-Item dist\ergalo-releve.exe).VersionInfo.FileVersion
+          if ($lue -ne $attendue) { throw "Version de l'exécutable $lue, étiquette $env:ETIQUETTE" }
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: ergalo-releve
+          path: |
+            dist/ergalo-releve.exe
+            dist/SHA256.txt
+          if-no-files-found: error
+
+  publier:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: construire
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+      id-token: write
+      attestations: write
+    steps:
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: ergalo-releve
+          path: dist
+      - name: Contrôler l'empreinte
+        working-directory: dist
+        run: tr -d '\r' < SHA256.txt | sha256sum --check
+      - uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
+        with:
+          subject-path: dist/ergalo-releve.exe
+      - name: Publier la version
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ETIQUETTE: ${{ github.ref_name }}
+          DEPOT: ${{ github.repository }}
+        run: |
+          empreinte=$(cut -d' ' -f1 dist/SHA256.txt)
+          printf '%s\n' \
+            "Exécutable Windows du relevé de vos outils, compilé par la CI de ce dépôt à partir de l'étiquette $ETIQUETTE." \
+            "" \
+            "SHA-256 : \`$empreinte\`" \
+            "" \
+            "Vérifier la provenance : \`gh attestation verify ergalo-releve.exe --repo $DEPOT\`" \
+            "" \
+            "Ce fichier seul ne fonctionne pas : il se télécharge depuis le questionnaire Ergalo, qui lui donne un nom portant le code d'accès du client." \
+            > notes.md
+          gh release create "$ETIQUETTE" dist/ergalo-releve.exe dist/SHA256.txt --repo "$DEPOT" --title "$ETIQUETTE" --notes-file notes.md --verify-tag
