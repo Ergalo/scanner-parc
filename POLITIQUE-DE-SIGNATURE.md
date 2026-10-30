@@ -1,5 +1,7 @@
 # Politique de signature du code · Code signing policy
 
+Free code signing provided by [SignPath.io](https://about.signpath.io), certificate by [SignPath Foundation](https://signpath.org) (requested, not yet granted · demandée, pas encore accordée).
+
 ## En français
 
 **État** : demande de signature gratuite en préparation auprès de SignPath Foundation (programme pour les projets open source). Tant qu'elle n'est pas accordée, les versions publiées ne sont pas signées ; leur empreinte SHA-256 et leur attestation de provenance GitHub permettent déjà de les vérifier.
@@ -31,4 +33,4 @@ Once granted:
 
 **Team**: committers, reviewers and approvers are listed in the table above (Guillaume Clerc, founder of Ergalo).
 
-**Privacy**: this program will not transfer any information to other networked systems. It never connects to the Internet; the file it produces stays on the PC until the user uploads it themselves to their Ergalo questionnaire. Ergalo privacy policy: <https://ergalo.fr/confidentialite>.
+**Privacy**: this program will not transfer any information to other networked systems unless specifically requested by the user or the person installing or operating it. In fact it never connects to the Internet; the file it produces stays on the PC until the user uploads it themselves to their Ergalo questionnaire. Ergalo privacy policy: <https://ergalo.fr/confidentialite>.
