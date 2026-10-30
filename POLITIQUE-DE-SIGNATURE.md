@@ -14,7 +14,7 @@ Une fois la signature accordée :
 
 | Rôle | Personnes |
 |---|---|
-| Auteurs et relecteurs (committers and reviewers) | Ergalo SAS : Guillaume Clerc, fondateur ; les modifications passent par une proposition de modification relue et une CI verte |
+| Auteurs et relecteurs (committers and reviewers) | Guillaume Clerc, fondateur d'Ergalo ; les modifications passent par une proposition de modification relue et une CI verte |
 | Approbation des signatures (approvers) | Guillaume Clerc |
 
 **Vie privée** : ce programme ne transmet aucune information à un autre système en réseau. Il ne se connecte jamais à Internet ; le fichier qu'il produit reste sur le PC, et c'est la personne qui le dépose elle-même dans son questionnaire Ergalo. Politique de confidentialité d'Ergalo : <https://ergalo.fr/confidentialite>.
@@ -29,6 +29,6 @@ Once granted:
 - Every signing request is manually approved by a team member listed above.
 - The signed program is built from this source only, with no proprietary component or third-party binary: it relies solely on .NET Framework 4.8 and `winsqlite3.dll`, both shipped with Windows.
 
-**Team**: committers, reviewers and approvers are listed in the table above (Ergalo SAS).
+**Team**: committers, reviewers and approvers are listed in the table above (Guillaume Clerc, founder of Ergalo).
 
 **Privacy**: this program will not transfer any information to other networked systems. It never connects to the Internet; the file it produces stays on the PC until the user uploads it themselves to their Ergalo questionnaire. Ergalo privacy policy: <https://ergalo.fr/confidentialite>.
