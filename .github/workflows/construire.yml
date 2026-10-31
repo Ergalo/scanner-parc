@@ -61,25 +61,36 @@ jobs:
       - name: Contrôler l'empreinte
         working-directory: dist
         run: tr -d '\r' < SHA256.txt | sha256sum --check
+      - name: Mettre l'exécutable dans un zip (certains navigateurs bloquent moins un zip qu'un exe)
+        working-directory: dist
+        run: |
+          touch -d '2026-01-01 00:00:00 UTC' ergalo-releve.exe
+          zip -X -q ergalo-releve.zip ergalo-releve.exe
+          unzip -p ergalo-releve.zip ergalo-releve.exe | sha256sum | grep -q "$(tr -d '\r' < SHA256.txt | cut -d' ' -f1)"
       - uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
         with:
-          subject-path: dist/ergalo-releve.exe
+          subject-path: |
+            dist/ergalo-releve.exe
+            dist/ergalo-releve.zip
       - name: Publier la version
         env:
           GH_TOKEN: ${{ github.token }}
           ETIQUETTE: ${{ github.ref_name }}
           DEPOT: ${{ github.repository }}
         run: |
-          empreinte=$(cut -d' ' -f1 dist/SHA256.txt)
+          empreinte=$(tr -d '\r' < dist/SHA256.txt | cut -d' ' -f1)
+          empreinte_zip=$(sha256sum dist/ergalo-releve.zip | cut -d' ' -f1)
           printf '%s\n' \
             "Exécutable Windows du relevé de vos outils, compilé par la CI de ce dépôt à partir de l'étiquette $ETIQUETTE." \
             "" \
-            "SHA-256 : \`$empreinte\`" \
+            "SHA-256 de l'exécutable : \`$empreinte\`" \
+            "" \
+            "Le zip contient le même exécutable. SHA-256 du zip : \`$empreinte_zip\`" \
             "" \
             "Vérifier la provenance : \`gh attestation verify ergalo-releve.exe --repo $DEPOT\`" \
             "" \
-            "Ce fichier seul ne fonctionne pas : il se télécharge depuis le questionnaire Ergalo, qui lui donne un nom portant le code d'accès du client." \
+            "Le fichier produit par le programme se dépose sur la page du questionnaire Ergalo du client." \
             "" \
             "Code signing policy (SignPath Foundation) : https://github.com/$DEPOT/blob/main/POLITIQUE-DE-SIGNATURE.md" \
             > notes.md
-          gh release create "$ETIQUETTE" dist/ergalo-releve.exe dist/SHA256.txt --repo "$DEPOT" --title "$ETIQUETTE" --notes-file notes.md --verify-tag
+          gh release create "$ETIQUETTE" dist/ergalo-releve.exe dist/ergalo-releve.zip dist/SHA256.txt --repo "$DEPOT" --title "$ETIQUETTE" --notes-file notes.md --verify-tag

@@ -41,8 +41,7 @@ namespace Ergalo.Releve.Tests
                 T("historique ouvert par le navigateur : lu quand même", HistoriqueOuvert),
                 T("historique verrouillé : signalé, le reste du relevé continue", HistoriqueVerrouille),
                 T("fichier exporté : format convenu, seulement les lignes cochées, rien de personnel", ExportFichier),
-                T("marque : lue dans le nom du fichier, refusée si absente, tronquée ou de date impossible", MarqueLue),
-                T("programme : refuse sans marque, refuse renommé, refuse expiré, produit le fichier avec la marque", ProgrammeComplet),
+                T("programme : tourne sous n'importe quel nom, même ancien nom marqué, produit le fichier sans marque", ProgrammeComplet),
             };
             foreach (var t in tests)
             {
@@ -212,15 +211,8 @@ namespace Ergalo.Releve.Tests
             }
         }
 
-        /// <summary>Un identifiant de marque comme ceux du site : 43 caractères base64url.</summary>
-        private const string IdEssai = "Essai_marque-0123456789abcdefghijklmnopqrst";
-
-        private static string NomMarque(string jour, string id) { return "ergalo-releve-" + jour + "-" + id + ".exe"; }
-
-        private static Marque MarqueEssai(DateTime expire)
-        {
-            return Marque.LireNom(NomMarque(expire.ToString("yyyyMMdd"), IdEssai));
-        }
+        /// <summary>Un ancien nom donné par le site avant D-451 : le programme doit tourner quand même.</summary>
+        private const string AncienNomMarque = "ergalo-releve-20261001-Essai_marque-0123456789abcdefghijklmnopqrst.exe";
 
         private static void ExportFichier()
         {
@@ -231,15 +223,12 @@ namespace Ergalo.Releve.Tests
                 perso.Coche = true; // la personne coche un site inconnu
                 r.Elements.First(e => e.Domaine == "notion.so").Coche = false; // et décoche Notion
 
-                string json = Export.Json(MarqueEssai(Maintenant.AddDays(30)), r.Elements, new DateTimeOffset(2026, 10, 29, 15, 40, 0, TimeSpan.FromHours(1)));
+                string json = Export.Json(r.Elements, new DateTimeOffset(2026, 10, 29, 15, 40, 0, TimeSpan.FromHours(1)));
                 var d = (Dictionary<string, object>)new JavaScriptSerializer().DeserializeObject(json);
                 Egal("ergalo-scanner", (string)d["format"], "format");
                 Egal(1, (int)d["version"], "version");
                 Egal("2026-10-29T15:40:00+01:00", (string)d["cree_le"], "date");
-                var m = (Dictionary<string, object>)d["marque"];
-                Egal(IdEssai, (string)m["id"], "marque recopiée");
-                Egal("ergalo-marque", (string)m["format"], "format de la marque");
-                Egal(1, (int)m["version"], "version de la marque");
+                Vrai(!d.ContainsKey("marque"), "plus de marque dans le fichier");
 
                 var elements = ((object[])d["elements"]).Cast<Dictionary<string, object>>().ToList();
                 Vrai(elements.Any(e => (string)e["source"] == "navigateur" && (string)e["domaine"] == "exemple-perso.fr"), "site coché présent");
@@ -257,54 +246,31 @@ namespace Ergalo.Releve.Tests
             }
         }
 
-        private static void MarqueLue()
-        {
-            Egal(43, IdEssai.Length, "identifiant d'essai de 43 caractères");
-            Vrai(MarqueEssai(Maintenant.AddDays(1)) != null, "marque valide lue");
-            Egal(IdEssai, MarqueEssai(Maintenant.AddDays(1)).Id, "identifiant lu");
-            Vrai(!MarqueEssai(Maintenant).Expiree(Maintenant), "valable tout le dernier jour");
-            Vrai(!MarqueEssai(Maintenant.AddDays(1)).Expiree(Maintenant), "pas encore expirée");
-            Vrai(MarqueEssai(Maintenant.AddDays(-1)).Expiree(Maintenant), "expirée");
-            Vrai(Marque.LireNom(NomMarque("20261128", IdEssai).Replace(".exe", " (1).exe")) != null, "copie renommée par le navigateur");
-            Vrai(Marque.LireNom(NomMarque("20261128", IdEssai).Replace(".exe", "(2).exe")) != null, "copie renommée par Firefox");
-            Vrai(Marque.LireNom("ergalo-releve.exe") == null, "sans marque");
-            Vrai(Marque.LireNom("mon-programme.exe") == null, "renommé");
-            Vrai(Marque.LireNom(NomMarque("20261128", IdEssai.Substring(1))) == null, "identifiant tronqué");
-            Vrai(Marque.LireNom(NomMarque("20261128", IdEssai + "x")) == null, "identifiant allongé");
-            Vrai(Marque.LireNom(NomMarque("20261332", IdEssai)) == null, "date impossible");
-            Vrai(Marque.LireNom(null) == null, "nom absent");
-            string json = MarqueEssai(new DateTime(2026, 11, 28)).Json;
-            Egal("{\"format\":\"ergalo-marque\",\"version\":1,\"id\":\"" + IdEssai + "\",\"expire_le\":\"2026-11-28\"}", json, "marque recopiée dans le fichier");
-        }
-
         private static void ProgrammeComplet()
         {
             if (exe == null || !File.Exists(exe)) throw new Exception("chemin du programme non donné");
             using (var pc = new PcFictif())
             {
                 string dossier = pc.Racine;
-                string sansMarque = Copier(exe, dossier, "ergalo-releve.exe");
-                Egal(2, Lancer(sansMarque, pc, Path.Combine(dossier, "a.json")), "code de sortie sans marque");
-                Vrai(!File.Exists(Path.Combine(dossier, "a.json")), "aucun fichier sans marque");
+                foreach (string nom in new[] { "ergalo-releve.exe", "releve (1).exe", AncienNomMarque })
+                {
+                    string copie = Copier(exe, dossier, nom);
+                    string autre = Path.Combine(dossier, nom + ".json");
+                    Egal(0, Lancer(copie, pc, autre), "code de sortie sous le nom « " + nom + " »");
+                    Vrai(File.Exists(autre), "fichier produit sous le nom « " + nom + " »");
+                }
 
-                string renomme = Copier(exe, dossier, "releve.exe");
-                Egal(2, Lancer(renomme, pc, Path.Combine(dossier, "a2.json")), "code de sortie renommé");
-
-                string expire = Copier(exe, dossier, NomMarque("20261001", IdEssai));
-                Egal(3, Lancer(expire, pc, Path.Combine(dossier, "b.json")), "code de sortie expiré");
-
-                string valide = Copier(exe, dossier, NomMarque("20261128", IdEssai).Replace(".exe", " (1).exe"));
+                string valide = Copier(exe, dossier, "ergalo-releve.exe");
                 string sortie = Path.Combine(dossier, "c.json");
-                Egal(0, Lancer(valide, pc, sortie), "code de sortie avec marque valide");
+                Egal(0, Lancer(valide, pc, sortie), "code de sortie");
                 string json = File.ReadAllText(sortie, Encoding.UTF8);
-                Vrai(json.Contains("\"id\":\"" + IdEssai + "\""), "marque recopiée");
+                Vrai(!json.Contains("\"marque\""), "pas de marque dans le fichier");
                 Vrai(json.Contains("\"domaine\": \"notion.so\""), "Notion dans le fichier");
                 Vrai(!json.Contains("exemple-perso.fr"), "site inconnu non coché absent");
-                Vrai(File.ReadAllBytes(valide).SequenceEqual(File.ReadAllBytes(exe)), "le programme marqué est octet pour octet le programme publié");
             }
         }
 
-        /// <summary>Copie du programme sous le nom que lui donne le site au téléchargement : son contenu ne change pas.</summary>
+        /// <summary>Copie du programme sous un autre nom : son contenu ne change pas.</summary>
         public static string Copier(string source, string dossier, string nom)
         {
             string cible = Path.Combine(dossier, nom);

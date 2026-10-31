@@ -28,10 +28,11 @@ Windows SmartScreen juge un programme sur sa signature et sur sa réputation (le
 
 Chaque [version publiée](https://github.com/Ergalo/scanner-parc/releases) est compilée par la CI de ce dépôt ([`.github/workflows/construire.yml`](.github/workflows/construire.yml)), jamais sur un poste de travail. Elle porte :
 
-- l'empreinte SHA-256 de l'exécutable (`SHA256.txt`), à comparer avec celle du fichier téléchargé : dans PowerShell, `Get-FileHash .\ergalo-releve-*.exe` ;
+- l'exécutable seul (`ergalo-releve.exe`) et le même dans un zip (`ergalo-releve.zip`), certains navigateurs bloquant moins un zip ;
+- l'empreinte SHA-256 de l'exécutable (`SHA256.txt`), à comparer avec celle du fichier téléchargé : dans PowerShell, `Get-FileHash .\ergalo-releve.exe` ;
 - une attestation de provenance GitHub, qui prouve que le fichier sort de ce code : `gh attestation verify ergalo-releve.exe --repo Ergalo/scanner-parc`.
 
-Le site d'Ergalo sert exactement ce fichier, octet pour octet. Seul son **nom** change au téléchargement : il porte le code d'accès du questionnaire (`ergalo-releve-AAAAMMJJ-<code>.exe`), valable 30 jours et une seule fois. Sans ce nom, le programme refuse de tourner. Le fichier publié ici ne sert donc à rien tout seul : c'est voulu.
+Le questionnaire d'Ergalo renvoie vers ces fichiers, inchangés : c'est le même programme pour tout le monde. Le fichier qu'il produit se dépose sur la page du questionnaire, ouverte par le lien privé du client ; c'est elle qui sait à quel questionnaire il appartient. Jusqu'à la version 1.1.1, le programme portait un code d'accès dans son nom et refusait de tourner sans lui : c'est retiré depuis la version 1.2.0.
 
 ## Code signing policy
 
@@ -41,7 +42,7 @@ Signature gratuite demandée à SignPath Foundation : Free code signing provided
 
 - Code : [`src/`](src) (C# 5, .NET Framework 4.8 livré avec Windows 10 et 11 ; SQLite par `winsqlite3.dll`, livrée avec Windows). Aucune dépendance extérieure.
 - Compiler et tester : `powershell -ExecutionPolicy Bypass -File construire.ps1`. Produit `dist/ergalo-releve.exe` et `dist/SHA256.txt`. Les tests tournent sur un PC fictif fabriqué dans un dossier temporaire, jamais sur les navigateurs de la machine.
-- Essai à la main, sur un PC fictif : `obj\tests.exe --fabriquer <dossier>`, puis copier `dist\ergalo-releve.exe` sous un nom marqué (par exemple `ergalo-releve-20991231-Essai_marque-0123456789abcdefghijklmnopqrst.exe`) et le lancer avec `--essai <dossier>`.
+- Essai à la main, sur un PC fictif : `obj\tests.exe --fabriquer <dossier>`, puis lancer `dist\ergalo-releve.exe --essai <dossier>`.
 - Publier une version : changer la version dans [`src/Programme.cs`](src/Programme.cs), fusionner, puis poser l'étiquette `vX.Y.Z`. Chaque nouvelle compilation repart de zéro en réputation auprès de Windows : on publie le moins souvent possible.
 - Signaler une faille : [SECURITY.md](SECURITY.md).
 
@@ -49,4 +50,4 @@ Signature gratuite demandée à SignPath Foundation : Free code signing provided
 
 **Ergalo · Relevé de vos outils** is a small, portable Windows program used by [Ergalo](https://ergalo.fr), a French digital-workplace consultancy, to inventory the work tools of a PC: installed software, startup programs, browser extensions, and the host names of the websites visited in the last 90 days (Chromium and Firefox family browsers, all profiles). It matches them against Ergalo's public tool catalogue ([`catalogue.tsv`](catalogue.tsv)), shows the user the exact file before saving it locally, and **never connects to the Internet**: the user uploads the file themselves to their Ergalo questionnaire. It reads no passwords, cookies, form data, page titles or full URLs, writes no user name or folder path, and requires no administrator rights.
 
-Releases are built by GitHub Actions from this repository only, with a published SHA-256 hash and a GitHub build provenance attestation. The released executable refuses to run unless its file name carries a one-time access code issued by Ergalo's website at download time; the file content is never modified. Licensed under the [MIT License](LICENSE). Code signing policy: [POLITIQUE-DE-SIGNATURE.md](POLITIQUE-DE-SIGNATURE.md).
+Releases are built by GitHub Actions from this repository only, with a published SHA-256 hash and a GitHub build provenance attestation. Everyone gets the same file (also offered as a zip); the user uploads its output from their private questionnaire link, which is what ties it to them. Licensed under the [MIT License](LICENSE). Code signing policy: [POLITIQUE-DE-SIGNATURE.md](POLITIQUE-DE-SIGNATURE.md).

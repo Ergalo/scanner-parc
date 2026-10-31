@@ -24,7 +24,6 @@ namespace Ergalo.Releve
 
         private readonly Environnement env;
         private readonly Catalogue catalogue;
-        private readonly Marque marque;
         private Releve releve;
         private bool miseAJour;
 
@@ -35,11 +34,10 @@ namespace Ergalo.Releve
         private readonly Button voir = new Button();
         private readonly Button enregistrer = new Button();
 
-        public Fenetre(Environnement env, Catalogue catalogue, Marque marque)
+        public Fenetre(Environnement env, Catalogue catalogue)
         {
             this.env = env;
             this.catalogue = catalogue;
-            this.marque = marque;
 
             Text = "Ergalo · Relevé de vos outils";
             Font = new Font("Segoe UI", 10f);
@@ -291,7 +289,7 @@ namespace Ergalo.Releve
 
         private string Contenu()
         {
-            return Export.Json(marque, releve.Elements, DateTimeOffset.Now);
+            return Export.Json(releve.Elements, DateTimeOffset.Now);
         }
 
         private void Apercu()
