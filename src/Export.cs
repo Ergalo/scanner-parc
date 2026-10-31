@@ -18,13 +18,12 @@ namespace Ergalo.Releve
             return "ergalo-outils-" + maintenantLocal.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture) + ".json";
         }
 
-        public static string Json(Marque marque, IEnumerable<Element> elements, DateTimeOffset creeLe)
+        public static string Json(IEnumerable<Element> elements, DateTimeOffset creeLe)
         {
             var sb = new StringBuilder();
             sb.Append("{\n");
             sb.Append("  \"format\": \"ergalo-scanner\",\n");
             sb.Append("  \"version\": 1,\n");
-            sb.Append("  \"marque\": ").Append(marque.Json).Append(",\n");
             sb.Append("  \"cree_le\": ").Append(Texte(Date(creeLe))).Append(",\n");
             sb.Append("  \"elements\": [");
             bool premier = true;

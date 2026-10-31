@@ -1,5 +1,6 @@
-// Point d'entrée. Sans marque valide dans son nom de fichier (programme pris ailleurs que dans le questionnaire du client,
-// renommé, ou expiré), le programme s'arrête avec une phrase simple. Options réservées aux essais, sur un PC fictif seulement :
+// Point d'entrée. Le programme est le même pour tout le monde et fonctionne quel que soit son nom (D-451) : c'est la page du
+// questionnaire, ouverte par le lien privé du client, qui reçoit le fichier produit. Options réservées aux essais, sur un PC
+// fictif seulement :
 //   --essai <dossier>            lit ce dossier au lieu du PC (voir EnvironnementEssai)
 //   --sortie <fichier.json>      avec --essai : enregistre le fichier sans fenêtre, lignes reconnues cochées
 //   --maintenant <date ISO>      avec --essai : date du jour simulée
@@ -13,16 +14,16 @@ using System.Text;
 using System.Windows.Forms;
 
 // Informations de version lues par Windows (Propriétés > Détails) et par les antivirus. La version suit l'étiquette de la
-// publication (v1.1.1 → 1.1.1.0) ; la changer veut dire recompiler, donc repartir de zéro en réputation : le moins souvent possible.
+// publication (v1.2.0 → 1.2.0.0) ; la changer veut dire recompiler, donc repartir de zéro en réputation : le moins souvent possible.
 [assembly: AssemblyTitle("Ergalo · Relevé de vos outils")]
 [assembly: AssemblyDescription("Relève les logiciels et les sites de travail de ce PC, sans connexion à Internet. Code source : https://github.com/Ergalo/scanner-parc")]
 [assembly: AssemblyCompany("Ergalo")]
 [assembly: AssemblyProduct("Ergalo · Relevé de vos outils")]
 [assembly: AssemblyCopyright("© 2026 Guillaume Clerc (Ergalo) · licence MIT")]
 [assembly: AssemblyTrademark("Ergalo")]
-[assembly: AssemblyVersion("1.1.1.0")]
-[assembly: AssemblyFileVersion("1.1.1.0")]
-[assembly: AssemblyInformationalVersion("1.1.1")]
+[assembly: AssemblyVersion("1.2.0.0")]
+[assembly: AssemblyFileVersion("1.2.0.0")]
+[assembly: AssemblyInformationalVersion("1.2.0")]
 [assembly: NeutralResourcesLanguage("fr-FR")]
 
 namespace Ergalo.Releve
@@ -47,22 +48,9 @@ namespace Ergalo.Releve
                 Application.SetCompatibleTextRenderingDefault(false);
             }
 
-            Marque marque = null;
-            try { marque = Marque.LireNom(Path.GetFileName(Assembly.GetEntryAssembly().Location)); }
-            catch (Exception) { }
-
             DateTime maintenantUtc = DateTime.UtcNow;
             if (essai != null && maintenant != null)
                 maintenantUtc = DateTimeOffset.Parse(maintenant, CultureInfo.InvariantCulture).UtcDateTime;
-
-            if (marque == null)
-                return Arret(silencieux, 2,
-                    "Ce programme ne trouve pas son code d'accès, qui est dans le nom du fichier (ergalo-releve-…). " +
-                    "S'il a été renommé, rendez-lui son nom d'origine. Sinon, téléchargez-le à nouveau depuis votre questionnaire Ergalo, " +
-                    "à l'étape « Listing de votre environnement digital ».");
-            if (marque.Expiree(maintenantUtc))
-                return Arret(silencieux, 3,
-                    "Ce programme a expiré. Retournez sur votre questionnaire Ergalo et téléchargez-le à nouveau : c'est gratuit et immédiat.");
 
             Catalogue catalogue = Catalogue.Embarque();
             Environnement env = essai != null ? (Environnement)new EnvironnementEssai(essai, maintenantUtc) : new EnvironnementWindows();
@@ -71,19 +59,12 @@ namespace Ergalo.Releve
             {
                 Releve releve = Releve.Faire(env, catalogue);
                 var date = new DateTimeOffset(maintenantUtc).ToOffset(TimeZoneInfo.Local.GetUtcOffset(maintenantUtc));
-                File.WriteAllText(sortie, Export.Json(marque, releve.Elements, date), new UTF8Encoding(false));
+                File.WriteAllText(sortie, Export.Json(releve.Elements, date), new UTF8Encoding(false));
                 return 0;
             }
 
-            Application.Run(new Fenetre(env, catalogue, marque));
+            Application.Run(new Fenetre(env, catalogue));
             return 0;
-        }
-
-        private static int Arret(bool silencieux, int code, string message)
-        {
-            if (silencieux) Console.Error.WriteLine(message);
-            else MessageBox.Show(message, "Ergalo · Relevé de vos outils", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            return code;
         }
 
         private static string Option(string[] args, string nom)
